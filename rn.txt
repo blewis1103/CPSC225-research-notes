@@ -1,0 +1,90 @@
+Brandon Lewis Research Notes
+Section 1.3 The World Wide Web
+
+1979 - Usenet newsgroup began, users posted information to share with others
+using proper software (What software did they use?/How did they use it?)
+
+1990 - World Wide Web was officially developed. Two types of software:
+server and client software. Servers are internet computers that provide 
+information, clients receive information put out by servers. Both 
+communicate using HTTP, based off TCP/IP.
+
+HTTP - Hypertext Transport Protocol
+Communication protocol where client requests document from server, 
+server returns the document. 
+(Why is it considered generic? Generic = flexible?)
+
+Request-Response Model - basic structure of HTTP
+	Client sends request message to server, server sends response
+	(What happens if there is no response? What does it mean about the 
+	server? Is it down?), messages are sent through TCP (Note - HTTP is         based off TCP/IP)
+	HTTP response message is readable and printable (an advantage over
+	other protocols)
+
+Structure of HTTP Request Message
+Overall Structure:
+Start line - consists of request method, request-URI, and HTTP version
+Request Methods
+	GET - primary method of HTTP (used when typing in URL bar)
+	FTP - accessing files on FTP server
+	MAILTO - accessng mail
+	HTTPS - accessing documents over secure connection (how does it 
+	differ from HTTP?)
+	FILE - accessing file on machine
+Header field - used to form URI in HTTP request, required in ecery HTTP/1.1 
+message; header fields have to have: field name, field value
+	 MIME type - field values that passes different information through
+	 email (Ex. text/hmtl and image/jpeg)
+	 Quality values - indicate preferences, specified by q=num (num is
+	 a decimal between 0 and 1, higher number indicates higher 
+	 preference)
+
+Structure of HTTP Response
+Status line: HTTP version, status code, text string
+       Status code - indicates type of response (200 is OK, 403 is Forbidden	   404 is Not Found, 500 is Internal Server Error)
+Header fields
+       Cache control - web browsers cache resources requested from servers,
+       allows for easier access to resources instead of requesting again, 
+       cache information can be invalidated (use HEAD method to guarantee
+       validity of resource copy)
+Blank line
+
+Character Sets - characters represented by integer values, US-ASCII is 
+character set that represent US characters in HTTP header field names, each
+character represented by 7-bit integer
+
+How to access website from Address Bar:
+Browser sends HTTP message, uses DNS to obtain IP address for website, TCP 
+connection made at IP address, sent HTTP message over TCP, information 
+received in browser client area)
+
+HTML - Hypertext Markup Language
+How most webpages are written. Both HTTP and HTML are Hypertext, does this 
+mean they were created concurrently? Do they work exclusively together? 
+Considered a fundamental technology, along with HTTP. HTML allows for 
+greater variety in content that Gopher, WAIS, and ARCHIE (Ex. hyperlinks, 
+page layouts, inline graphics)
+
+Definition of WWW - Servers that provide information through HTTP, providing
+HTML documents.
+
+9/15/10
+1.6 Web Clients
+
+Web client - software that accesses a web server by sending HTTP request
+message
+
+Mosiac browser - first browser for general public by National Center for Supercomputer Applications
+       Netscape and Internet Explorer both based off Mosiac
+
+Browser war between Netscape and Microsoft; MS won by bundling IE with Windows Operating System, Netscape acquired by AOL, source code opened and launched
+Mozilla project, became Firefox browser
+	Other browsers: Safari, Opera, and Google Chrome
+
+Status messages:
+Resolving: requesting IP address from DNS
+Connecting: creating TCP connection
+Waiting: HTTP request sent
+Transferring data: HTTP response begun
+Done: Response has been received
+
