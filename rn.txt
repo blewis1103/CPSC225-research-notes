@@ -88,5 +88,37 @@ Waiting: HTTP request sent
 Transferring data: HTTP response begun
 Done: Response has been received
 
-Test test test
+10/1/10
+Chapter 2 - XHTML
 
+Two types of information in HTML document
+- Markup information
+ - contained in tags < >
+ - character data
+	- everything outside of markup tags
+ - document type declaration (DTD) - used to identify version of HTML
+- document instance
+  - start or end tag
+  - tree structure (like java?)
+  - content of element - everything between tags
+  - element of doc - start or end tag, anything between tags
+  - root element (part of DTD) - after DOCTYPE keyword
+	- HTML document - html
+	- XHTML document = xmlns""
+- HTML element has two children: head and body
+- head - provides instructions to browser, text in element doesn't appear in browser (invisible element)
+- body - information in between tags displayed in browser, <p> tags not shown b/c it defines paragraph of text
+- Tim Berners-Lee develops HTML in 1990
+- Browser wars between Netscape and Internet Explorer
+	- both browsers based off of Mosaic
+	- Increased web innovation
+	- HTML defined by what was implemented by browser makers
+	- Standardization needed, TBL launches W3C 
+World Wide Web Conference - 1998
+	- Metalanguage - defines syntax of language
+	- Metalanguage of HTML 4.01 -- SGML (Standard Generalized Markup Language) (why is it called "generalized")
+	- SGML complicated parsing of HTML
+- XML - Extensible Markup Language
+	- Introduced in 1998 by W3C
+	- restricted version of SGML
+	- HTML using XML = XHTML 
