@@ -88,6 +88,28 @@ Waiting: HTTP request sent
 Transferring data: HTTP response begun
 Done: Response has been received
 
+Web Servers
+Features
+- accept HTTP requests from web clients and return an appropriate resource
+  1. Server calls on TCP software, waits for connection requests
+  2. Server dedicates subtask to handle new connection
+  3. Subtask establishes TCP connection, receives HTTP request
+  4. Subtask examines Host header field, determines virtual host receiving requ\
+est and invokes right software
+  5. Virtual host software maps Request-URL field of HTTP request to resource
+  6. Host determines MIME type of file, or runs program
+  7. Information logged in text file
+- modern servers can process multiple requests
+- Virtual host - determined by examining the Host header field
+Server Configuration
+- external communication - tuning the server (optimizing performance of server)
+  - IP addresses and TCP ports used to connect to server
+  - Number of subtasks (threads in java)
+  - Maximum number of threads running at once
+  - Maximum number of TCP requests queued up
+  - Length of time server will wait after HTTP request
+- internal processing
+
 10/1/10
 Chapter 2 - XHTML
 
